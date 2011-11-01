@@ -13,5 +13,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def carregar_pagina
+    @page = params[:page] || 1
+    @per_page = params[:per_page] || 2
+  end
+
+  def paginate( scope )
+    carregar_pagina
+    scope.paginate( :per_page => @per_page, :page => @page )
+  end
+
 
 end

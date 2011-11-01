@@ -52,7 +52,15 @@ Loja::Application.routes.draw do
 
   root :to => 'produtos#index'
   resources :produtos
-  resources :itens
+  resources :itens do
+    collection do
+      put :atualizar_quantidades
+    end
+  end
+
+  namespace :admin  do
+    resources :produtos
+  end
 
   # See how all your routes lay out with "rake routes"
 

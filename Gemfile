@@ -5,12 +5,13 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'less-rails-bootstrap', '1.3.3'
-
 gem 'haml'
+
+gem 'less-rails-bootstrap', '1.3.3'
 
 gem 'mysql2'
 
+gem 'will_paginate'
 
 # Gems used only for assets and not required
 # in production environments by default.

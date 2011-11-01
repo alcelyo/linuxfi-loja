@@ -33,6 +33,7 @@
       <% unless flash[key].blank? %>
           <div class="alert-message <%= key %>">
             <a class="close" href="#">×</a>
+
             <p><%= flash[key] %></p>
           </div>
       <% end %>

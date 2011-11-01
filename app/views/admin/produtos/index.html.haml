@@ -1,0 +1,16 @@
+%h1 Produtos
+
+= will_paginate @produtos
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Preço
+  %tbody
+    - @produtos.each do |produto|
+      %tr
+        %td= produto.nome
+        %td= number_to_currency produto.preco
+
+= will_paginate @produtos
