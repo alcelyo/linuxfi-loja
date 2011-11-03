@@ -1,7 +1,7 @@
 class Admin::ProdutosController < Admin::BaseController
 
-  def index
-    @produtos = paginate( Produto )
-  end
+  include ControllerGeneratorHelper
+
+  gerar_controller Produto
 
 end

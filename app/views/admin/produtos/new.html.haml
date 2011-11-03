@@ -1,0 +1,10 @@
+%h1 Criar/Atualizar Produto
+
+= admin_produto_form( @produto ) do |f|
+
+  = f.text_field :nome
+  = f.text_field :preco
+  = f.text_area :descricao
+
+  .actions
+    %p= f.submit 'Enviar', :class => 'btn primary'

@@ -1,5 +1,7 @@
 %h1 Produtos
 
+%p= link_to 'Novo produto', new_admin_produto_url
+
 = will_paginate @produtos
 
 %table
@@ -12,5 +14,7 @@
       %tr
         %td= produto.nome
         %td= number_to_currency produto.preco
+        %td= link_to 'Editar', edit_admin_produto_url( produto )
+
 
 = will_paginate @produtos

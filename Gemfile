@@ -7,11 +7,19 @@ gem 'rails', '3.1.1'
 
 gem 'haml'
 
+gem 'jquery-rails'
+
 gem 'less-rails-bootstrap', '1.3.3'
 
 gem 'mysql2'
 
+gem 'sunspot_rails'
+
 gem 'will_paginate'
+
+group :test do
+  gem 'rspec-rails'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,8 +29,6 @@ group :assets do
   gem 'uglifier'
   gem 'therubyracer'
 end
-
-gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
