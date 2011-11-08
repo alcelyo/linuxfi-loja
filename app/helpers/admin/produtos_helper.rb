@@ -1,19 +1,17 @@
 module Admin::ProdutosHelper
 
-  def admin_produto_form( produto, &block )
-
-    result = if produto.new_record?
-              [ admin_produtos_url, :post ]
+  def admin_form_for(record, &block)
+    result = if record.new_record?
+               [send("admin_#{record.class.name.underscore.pluralize}_url"), :post]
              else
-              [ admin_produto_url( produto ), :put ]
+               [send("admin_#{record.class.name.underscore}_url", record), :put]
              end
 
-
-    form_for( produto,
-              :url => result.first,
-              :method => result.last,
-              :builder => BootstrapFormBuilder,
-              &block )
+    form_for(record,
+             :url     => result.first,
+             :method  => result.last,
+             :builder => BootstrapFormBuilder,
+             &block)
   end
 
 end

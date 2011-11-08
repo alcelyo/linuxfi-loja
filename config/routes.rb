@@ -60,6 +60,7 @@ Loja::Application.routes.draw do
 
   namespace :admin  do
     resources :produtos
+    resources :categorias
   end
 
   # See how all your routes lay out with "rake routes"
