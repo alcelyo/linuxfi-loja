@@ -21,7 +21,7 @@ class BootstrapFormBuilder < ActionView::Base::FormBuilder
 
     markup = %Q!
       <div class="#{classes.join( ' ' )}">
-        <label>#{name}</label>
+        <label>#{self.object.class.human_attribute_name( name )}</label>
         <div class="input">
           #{content}
           #{error_message}
