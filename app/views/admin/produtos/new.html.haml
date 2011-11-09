@@ -1,4 +1,5 @@
-%h1 Criar/Atualizar Produto
+%h1
+  = t( 'formularios.criar_atualizar', :tipo => Produto.model_name.human )
 
 = admin_form_for( @produto ) do |f|
 

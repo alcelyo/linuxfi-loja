@@ -3,6 +3,8 @@
     previous_label: "&#8592; Anterior"
     next_label: "Próxima &#8594;"
     page_gap: "&hellip;"
+  formularios:
+    criar_atualizar: 'Criar/Atualizar %{tipo}'
   produtos:
     index:
       titulo: Listagem de Produtos

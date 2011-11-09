@@ -1,7 +1,7 @@
 module ApplicationHelper
 
-  def t( key )
-    I18n.translate( key )
+  def t( key, options = {} )
+    I18n.translate( key, options )
   end
 
 end

@@ -3,7 +3,20 @@ class ApplicationController < ActionController::Base
 
   helper_method :pedido_atual
 
+  before_filter :selecionar_lingua
+
   protected
+
+  def selecionar_lingua
+    I18n.locale = session[:lingua] ||= 'pt-BR'
+=begin
+    I18n.current_locale = if session[:lingua].blank?
+                            'pt-BR'
+                          else
+                            session[:lingua]
+                          end
+=end
+  end
 
   def pedido_atual
     @pedido_atual ||= if !session[:pedido_id].blank?

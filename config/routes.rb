@@ -51,12 +51,16 @@ Loja::Application.routes.draw do
   # root :to => 'welcome#index'
 
   root :to => 'produtos#index'
+
   resources :produtos
+
   resources :itens do
     collection do
       put :atualizar_quantidades
     end
   end
+
+  resources :linguas
 
   namespace :admin  do
     resources :produtos
