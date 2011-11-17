@@ -43,8 +43,6 @@ module ControllerGeneratorHelper
 
       !
 
-      puts "Método index -> \n#{index}"
-
       class_eval index
     end
 

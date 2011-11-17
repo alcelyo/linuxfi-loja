@@ -19,7 +19,9 @@ gem 'will_paginate'
 
 group :test do
   gem 'rspec-rails'
-  #gem 'capybara'
+  gem 'capybara'
+  gem 'shoulda'
+  gem 'factory_girl'
 end
 
 # Gems used only for assets and not required
