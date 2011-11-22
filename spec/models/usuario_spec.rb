@@ -47,15 +47,16 @@ describe Usuario do
 
     it 'deve aceitar a senha do usuário com email' do
       @outro_usuario = Usuario.autenticar( @usuario.email, @senha )
-
       @outro_usuario.should == @usuario
     end
 
     it 'não deve aceitar a senha do usuário se ela for inválida' do
       @outro_usuario = Usuario.autenticar( @usuario.email, "098765" )
+      @outro_usuario.should be_nil
+    end
 
-      Usuario.stub!( :autenticar ).and_return( nil )
-
+     it 'não deve aceitar a senha do usuário se ela for inválida' do
+      @outro_usuario = Usuario.autenticar( "fake@teste", "098765" )
       @outro_usuario.should be_nil
     end
 

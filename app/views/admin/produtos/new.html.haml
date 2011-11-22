@@ -3,9 +3,10 @@
 
 = admin_form_for( @produto ) do |f|
 
-  = f.text_field :nome
+  = f.text_field :nome  , :placeholder => " Teste"
   = f.text_field :preco
   = f.text_area :descricao
+  = f.select :categoria_id, Categoria.all.map {|c| [c.nome, c.id]}, :include_blanck => true
 
   .actions
     %p= f.submit 'Enviar', :class => 'btn primary'

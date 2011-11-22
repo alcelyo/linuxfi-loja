@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(:version => 20111109005117) do
   add_index "categorias", ["nome"], :name => "index_categorias_on_nome", :unique => true
 
   create_table "itens", :force => true do |t|
-    t.integer "pedido_id",  :null => false
-    t.integer "produto_id", :null => false
-    t.integer "quantidade"
+    t.integer "pedido_id",                 :null => false
+    t.integer "produto_id",                :null => false
+    t.integer "quantidade", :default => 1, :null => false
   end
 
   add_index "itens", ["pedido_id"], :name => "index_itens_on_pedido_id"

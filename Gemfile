@@ -22,6 +22,7 @@ group :test do
   gem 'capybara'
   gem 'shoulda'
   gem 'factory_girl'
+  gem 'ZenTest'
 end
 
 # Gems used only for assets and not required
