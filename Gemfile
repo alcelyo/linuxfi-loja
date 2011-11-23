@@ -29,6 +29,10 @@ group :development do
   gem 'capistrano'
 end
 
+group :production do
+  gem 'unicorn'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
