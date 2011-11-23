@@ -38,5 +38,4 @@ production:
   database: loja_production
   pool: 5
   username: root
-  password: root
-  socket: /var/run/mysqld/mysqld.sock
+  password:
